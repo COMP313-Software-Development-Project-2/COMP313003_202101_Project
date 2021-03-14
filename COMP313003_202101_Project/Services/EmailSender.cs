@@ -28,7 +28,7 @@ namespace COMP313003_202101_Project.Services
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("email@domain.com", Options.SendGridUser),
+                From = new EmailAddress("kroa1@my.centennialcollege.ca", Options.SendGridUser),
                 Subject = subject,
                 PlainTextContent = message,
                 HtmlContent = message
