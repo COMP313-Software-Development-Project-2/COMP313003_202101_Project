@@ -8,6 +8,7 @@ namespace COMP313003_202101_Project.Areas.OrderFulfillment.Models
 {
     public class Shipment
     {
+        [Key]
         [Required]
         [Display(Name = "Shipment Id")]
         public int ShipmentId { get; set; }
