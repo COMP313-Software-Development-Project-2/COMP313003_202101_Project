@@ -33,12 +33,6 @@ namespace COMP313003_202101_Project
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            // requires
-            // using Microsoft.AspNetCore.Identity.UI.Services;
-            // using WebPWrecover.Services;
-            services.AddTransient<IEmailSender, EmailSender>();
-            services.Configure<AuthMessageSenderOptions>(Configuration);
-
             services.Configure<IdentityOptions>(options =>
             {
                 // Password settings.
