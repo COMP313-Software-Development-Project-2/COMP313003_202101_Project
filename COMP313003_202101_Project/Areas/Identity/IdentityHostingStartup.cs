@@ -20,7 +20,7 @@ namespace COMP313003_202101_Project.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("LocalConnection")));
 
-                services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<ApplicationDbContext>();
             });
         }
