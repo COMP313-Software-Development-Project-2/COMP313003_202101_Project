@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
 {
+    [Area("Identity")]
     [Authorize]
     [Produces("application/json")]
     [Route("api/User")]
@@ -42,9 +43,9 @@ namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
         }
 
         [HttpGet("[action]/{id}")]
-        public IActionResult GetByApplicationUserId([FromRoute]string id)
+        public IActionResult GetByUserId([FromRoute]string id)
         {
-            UserProfile userProfile = _context.UserProfile.SingleOrDefault(x => x.ApplicationUserId.Equals(id));
+            UserProfile userProfile = _context.UserProfile.SingleOrDefault(x => x.UserId.Equals(id));
             List<UserProfile> Items = new List<UserProfile>();
             if (userProfile != null)
             {
@@ -66,7 +67,7 @@ namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
                 {
                     register.Password = user.PasswordHash;
                     register.ConfirmPassword = user.PasswordHash;
-                    register.ApplicationUserId = user.Id;
+                    register.UserId = user.Id;
                     _context.UserProfile.Add(register);
                     await _context.SaveChangesAsync();
                 }
@@ -90,10 +91,10 @@ namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
             UserProfile profile = payload.value;
             if (profile.Password.Equals(profile.ConfirmPassword))
             {
-                var user = await _userManager.FindByIdAsync(profile.ApplicationUserId);
+                var user = await _userManager.FindByIdAsync(profile.UserId);
                 var result = await _userManager.ChangePasswordAsync(user, profile.OldPassword, profile.Password);
             }
-            profile = _context.UserProfile.SingleOrDefault(x => x.ApplicationUserId.Equals(profile.ApplicationUserId));
+            profile = _context.UserProfile.SingleOrDefault(x => x.UserId.Equals(profile.UserId));
             return Ok(profile);
         }
         
@@ -110,7 +111,7 @@ namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
             var userProfile = _context.UserProfile.SingleOrDefault(x => x.UserProfileId.Equals((int)payload.key));
             if (userProfile != null)
             {
-                var user = _context.Users.Where(x => x.Id.Equals(userProfile.ApplicationUserId)).FirstOrDefault();
+                var user = _context.Users.Where(x => x.Id.Equals(userProfile.UserId)).FirstOrDefault();
                 var result = await _userManager.DeleteAsync(user);
                 if (result.Succeeded)
                 {

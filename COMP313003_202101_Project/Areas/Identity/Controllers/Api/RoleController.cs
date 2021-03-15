@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
 {
+    [Area("Identity")]
     [Authorize]
     [Produces("application/json")]
     [Route("api/Role")]
@@ -49,7 +50,7 @@ namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
 
         // GET: api/Role
         [HttpGet("[action]/{id}")]
-        public async Task<IActionResult> GetRoleByApplicationUserId([FromRoute]string id)
+        public async Task<IActionResult> GetRoleByUserId([FromRoute]string id)
         {
             await _roles.GenerateRolesFromPagesAsync();
             var user = await _userManager.FindByIdAsync(id);
@@ -59,7 +60,7 @@ namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
             foreach (var item in roles)
             {
                 bool isInRole = (await _userManager.IsInRoleAsync(user, item.Name)) ? true : false;
-                Items.Add(new UserRoleViewModel { CounterId = count, ApplicationUserId = id, RoleName = item.Name, IsHaveAccess = isInRole });
+                Items.Add(new UserRoleViewModel { CounterId = count, UserId = id, RoleName = item.Name, IsHaveAccess = isInRole });
                 count++;
             }
             
@@ -73,7 +74,7 @@ namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
             UserRoleViewModel userRole = payload.value;
             if (userRole != null)
             {
-                var user = await _userManager.FindByIdAsync(userRole.ApplicationUserId);
+                var user = await _userManager.FindByIdAsync(userRole.UserId);
                 if (user != null)
                 {
                     if (userRole.IsHaveAccess)

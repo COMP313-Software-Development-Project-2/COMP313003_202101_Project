@@ -8,6 +8,7 @@ using COMP313003_202101_Project.Pages;
 
 namespace COMP313003_202101_Project.Areas.Identity.Controllers
 {
+    [Area("Identity")]
     [Authorize(Roles = MainMenu.CustomerType.RoleName)]
     public class CustomerTypeController : Controller
     {

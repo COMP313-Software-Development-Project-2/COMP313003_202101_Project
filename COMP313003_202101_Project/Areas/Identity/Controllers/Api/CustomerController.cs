@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
 {
+    [Area("Identity")]
     [Authorize]
     [Produces("application/json")]
     [Route("api/Customer")]

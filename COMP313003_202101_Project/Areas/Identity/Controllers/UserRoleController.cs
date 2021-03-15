@@ -10,7 +10,7 @@ using COMP313003_202101_Project.Pages;
 
 namespace COMP313003_202101_Project.Areas.Identity.Controllers
 {
-    
+    [Area("Identity")]
     public class UserRoleController : Controller
     {
         private readonly UserManager<User> _userManager;
