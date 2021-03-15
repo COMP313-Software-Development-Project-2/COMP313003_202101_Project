@@ -10,7 +10,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title text-primary"><i class="fa fa-truck"></i> @ViewData["Title"]</h3>
+                <h3 class="box-title text-dark-gray"><i class="fa fa-truck"></i> @ViewData["Title"]</h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
@@ -99,13 +99,13 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "ShipmentId", headerText: 'Shipment', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "ShipmentName", headerText: 'Shipment / DO#', allowEditing: false },
-                        { field: "IsFullShipment", headerText: 'Full Shipment', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
-                        { field: "SalesOrderId", headerText: 'SO#', foreignKeyField: "SalesOrderId", foreignKeyValue: "SalesOrderName", dataSource: dataManagerSalesOrder, validationRules: { required: true } },
+                        { field: "ShipmentId", headerText: 'Shipment Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "ShipmentName", headerText: 'Shipment / DO Id', allowEditing: false },
                         { field: "ShipmentDate", headerText: 'Shipment Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
                         { field: "ShipmentTypeId", headerText: 'Shipment Type', foreignKeyField: "ShipmentTypeId", foreignKeyValue: "ShipmentTypeName", dataSource: dataManagerShipmentType },
                         { field: "WarehouseId", headerText: 'Warehouse', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
+                        { field: "OrderId", headerText: 'Order', foreignKeyField: "SalesOrderId", foreignKeyValue: "SalesOrderName", dataSource: dataManagerSalesOrder, validationRules: { required: true } },
+                        { field: "IsFullShipment", headerText: 'Full Shipment', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
                     ],
                     actionComplete: "complete",
                 });
