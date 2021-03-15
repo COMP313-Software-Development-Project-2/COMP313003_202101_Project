@@ -30,7 +30,7 @@ namespace COMP313003_202101_Project.Pages
             public const string PageName = "Item";
             public const string RoleName = "Supplier,Merchant";
             public const string Path = "/Inventory/Item/Index";
-            public const string ControllerName = "Product";
+            public const string ControllerName = "Item";
             public const string ActionName = "Index";
         }
 
