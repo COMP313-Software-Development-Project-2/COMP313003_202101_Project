@@ -7,10 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace COMP313003_202101_Project.Controllers
 {
-    
+    [Area("Identity")]
     public class DashboardController : Controller
     {
-        [Area("Identity")]
         [Authorize(Roles = Pages.MainMenu.Dashboard.RoleName)]
         public IActionResult Index()
         {
