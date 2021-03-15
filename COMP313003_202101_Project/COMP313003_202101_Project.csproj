@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Accounting\Views\CashBank\**" />
+    <Compile Remove="Areas\Accounting\Views\PaymentReceive\**" />
+    <Content Remove="Areas\Accounting\Views\CashBank\**" />
+    <Content Remove="Areas\Accounting\Views\PaymentReceive\**" />
+    <EmbeddedResource Remove="Areas\Accounting\Views\CashBank\**" />
+    <EmbeddedResource Remove="Areas\Accounting\Views\PaymentReceive\**" />
+    <None Remove="Areas\Accounting\Views\CashBank\**" />
+    <None Remove="Areas\Accounting\Views\PaymentReceive\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.4" />
@@ -24,12 +35,10 @@
   <ItemGroup>
     <None Include="Areas\Accounting\Views\BillType\Index.cshtml" />
     <None Include="Areas\Accounting\Views\Bill\Index.cshtml" />
-    <None Include="Areas\Accounting\Views\CashBank\Index.cshtml" />
     <None Include="Areas\Accounting\Views\Currency\Index.cshtml" />
     <None Include="Areas\Accounting\Views\GoodsReceivedNote\Index.cshtml" />
     <None Include="Areas\Accounting\Views\InvoiceType\Index.cshtml" />
     <None Include="Areas\Accounting\Views\Invoice\Index.cshtml" />
-    <None Include="Areas\Accounting\Views\PaymentReceive\Index.cshtml" />
     <None Include="Areas\Accounting\Views\PaymentType\Index.cshtml" />
     <None Include="Areas\Accounting\Views\PaymentVoucher\Index.cshtml" />
     <None Include="Areas\Accounting\Views\_ViewImports.cshtml" />
