@@ -94,7 +94,8 @@ body {
   background: #fff;
   padding: 15px;
   color: #444;
-  border-top: 1px solid #d2d6de;
+  /*border-top: 1px solid #d2d6de;*/
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 /* Fixed layout */
 .fixed .main-header,
@@ -191,14 +192,15 @@ a:focus {
   z-index: 1030;
 }
 .main-header .navbar {
-  -webkit-transition: margin-left 0.3s ease-in-out;
-  -o-transition: margin-left 0.3s ease-in-out;
-  transition: margin-left 0.3s ease-in-out;
-  margin-bottom: 0;
-  margin-left: 230px;
-  border: none;
-  min-height: 50px;
-  border-radius: 0;
+    -webkit-transition: margin-left 0.3s ease-in-out;
+    -o-transition: margin-left 0.3s ease-in-out;
+    transition: margin-left 0.3s ease-in-out;
+    margin-bottom: 0;
+    margin-left: 230px;
+    border: none;
+    min-height: 50px;
+    border-radius: 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 .layout-top-nav .main-header .navbar {
   margin-left: 0;
@@ -452,6 +454,7 @@ a:focus {
 }
 .sidebar {
   padding-bottom: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 .sidebar-form input:focus {
   border-color: transparent;
@@ -1530,10 +1533,10 @@ a:focus {
   position: relative;
   border-radius: 20px;
   background: #ffffff;
-  border-top: 3px solid #d2d6de;
+  /*border-top: 3px solid #d2d6de;*/
   margin-bottom: 20px;
   width: 100%;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
 }
 .box.box-primary {
   border-top-color: #3c8dbc;
@@ -1809,8 +1812,8 @@ a:focus {
 .box-footer {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   border-top: 1px solid #f4f4f4;
   padding: 10px;
   background-color: #ffffff;
