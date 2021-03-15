@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace COMP313003_202101_Project.Areas.Orders.Controllers
 {
     [Area("Orders")]
-    [Authorize(Roles = Pages.MainMenu.PurchaseType.RoleName)]
+    //[Authorize(Roles = Pages.MainMenu.PurchaseType.RoleName)]
     public class PurchaseTypeController : Controller
     {
         public IActionResult Index()
