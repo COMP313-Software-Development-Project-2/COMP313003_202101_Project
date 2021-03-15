@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace COMP313003_202101_Project.Areas.Identity.Models
 {
+    [Area("Inventory")]
     public class UserProfile
     {
         [Key]
@@ -26,7 +28,7 @@ namespace COMP313003_202101_Project.Areas.Identity.Models
         public string OldPassword { get; set; }
         [Display(Name = "Profile Picture")] 
         public string ProfilePicture { get; set; } = "/upload/blank-person.png";
-        [Display(Name = "Application User Id")]
-        public string ApplicationUserId { get; set; }
+        [Display(Name = "User Id")]
+        public string UserId { get; set; }
     }
 }
