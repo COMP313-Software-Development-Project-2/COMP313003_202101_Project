@@ -21,6 +21,7 @@ namespace COMP313003_202101_Project.Areas.Identity
                         context.Configuration.GetConnectionString("LocalConnection")));
 
                 services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
+                    .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<ApplicationDbContext>();
             });
         }
