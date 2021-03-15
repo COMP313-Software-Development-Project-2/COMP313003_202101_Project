@@ -497,9 +497,6 @@ namespace COMP313003_202101_Project.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ConfirmPassword")
                         .HasColumnType("nvarchar(max)");
 
@@ -519,6 +516,9 @@ namespace COMP313003_202101_Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProfilePicture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserProfileId");

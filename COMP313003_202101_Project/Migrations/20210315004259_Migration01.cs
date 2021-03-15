@@ -543,7 +543,7 @@ namespace COMP313003_202101_Project.Migrations
                     ConfirmPassword = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     OldPassword = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ProfilePicture = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ApplicationUserId = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

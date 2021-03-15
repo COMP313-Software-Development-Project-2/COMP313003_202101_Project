@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace COMP313003_202101_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210314174703_Migration01")]
+    [Migration("20210315004259_Migration01")]
     partial class Migration01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -499,9 +499,6 @@ namespace COMP313003_202101_Project.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ConfirmPassword")
                         .HasColumnType("nvarchar(max)");
 
@@ -521,6 +518,9 @@ namespace COMP313003_202101_Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProfilePicture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserProfileId");
