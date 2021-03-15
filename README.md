@@ -30,8 +30,11 @@ Inventory Management System
 
 #### Institution:
 ICET Department
+
 School of Engineering Technology and Applied Science  
+
 Progress Campus, Block A 
+
 Centennial College  
 
 #### Course:
@@ -81,19 +84,17 @@ Design Pattern: MVC
 
 ### Installation
 
-1. Clone the repo
+1. Clone the repo:
    ```sh
    git clone github.com/COMP313-Software-Development-Project-2/COMP313003_202101_Project.git
    ```
-2. Install packages
+2. If packages isn't present, on the Package Manager Console, restore packages:
    ```sh
-   Install-Package Microsoft.EntityFrameworkCore.SqlServer
-   Install-Package Microsoft.AspNetCore.Identity.EntityFrameworkCore
-   Install-Package Microsoft.AspNetCore.Identity.UI
-   Install-Package Microsoft.EntityFrameworkCore.Tools
-   Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design
-   Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson
-   Install-Package Microsoft.AspNetCore.App.Ref
+   dotnet restore
+   ```
+3. If packages isn't present, on the Package Manager Console, update database:
+   ```sh
+   Update-Database
    ```
 
 <!-- ROADMAP -->
