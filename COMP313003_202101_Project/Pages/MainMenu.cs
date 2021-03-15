@@ -10,8 +10,8 @@ namespace COMP313003_202101_Project.Pages
         public static class Customer
         {
             public const string PageName = "Customer";
-            public const string RoleName = "Customer";
-            public const string Path = "/Customer/Index";
+            public const string RoleName = "Supplier";
+            public const string Path = "/Identity/Customer/Index";
             public const string ControllerName = "Customer";
             public const string ActionName = "Index";
         }
@@ -19,17 +19,17 @@ namespace COMP313003_202101_Project.Pages
         public static class Vendor
         {
             public const string PageName = "Vendor";
-            public const string RoleName = "Vendor";
-            public const string Path = "/Vendor/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Identity/Vendor/Index";
             public const string ControllerName = "Vendor";
             public const string ActionName = "Index";
         }
 
-        public static class Product
+        public static class Item
         {
             public const string PageName = "Product";
-            public const string RoleName = "Product";
-            public const string Path = "/Product/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Inventory/Product/Index";
             public const string ControllerName = "Product";
             public const string ActionName = "Index";
         }
@@ -37,8 +37,8 @@ namespace COMP313003_202101_Project.Pages
         public static class PurchaseOrder
         {
             public const string PageName = "Purchase Order";
-            public const string RoleName = "Purchase Order";
-            public const string Path = "/PurchaseOrder/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Inventory/PurchaseOrder/Index";
             public const string ControllerName = "PurchaseOrder";
             public const string ActionName = "Index";
         }
@@ -46,8 +46,8 @@ namespace COMP313003_202101_Project.Pages
         public static class GoodsReceivedNote
         {
             public const string PageName = "Goods Received Note";
-            public const string RoleName = "Goods Received Note";
-            public const string Path = "/GoodsReceivedNote/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/GoodsReceivedNote/Index";
             public const string ControllerName = "GoodsReceivedNote";
             public const string ActionName = "Index";
         }
@@ -55,8 +55,8 @@ namespace COMP313003_202101_Project.Pages
         public static class Bill
         {
             public const string PageName = "Bill";
-            public const string RoleName = "Bill";
-            public const string Path = "/Bill/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/Bill/Index";
             public const string ControllerName = "Bill";
             public const string ActionName = "Index";
         }
@@ -64,8 +64,8 @@ namespace COMP313003_202101_Project.Pages
         public static class PaymentVoucher
         {
             public const string PageName = "Payment Voucher";
-            public const string RoleName = "Payment Voucher";
-            public const string Path = "/PaymentVoucher/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/PaymentVoucher/Index";
             public const string ControllerName = "PaymentVoucher";
             public const string ActionName = "Index";
         }
@@ -73,8 +73,8 @@ namespace COMP313003_202101_Project.Pages
         public static class SalesOrder
         {
             public const string PageName = "Sales Order";
-            public const string RoleName = "Sales Order";
-            public const string Path = "/SalesOrder/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Orders/SalesOrder/Index";
             public const string ControllerName = "SalesOrder";
             public const string ActionName = "Index";
         }
@@ -82,8 +82,8 @@ namespace COMP313003_202101_Project.Pages
         public static class Shipment
         {
             public const string PageName = "Shipment";
-            public const string RoleName = "Shipment";
-            public const string Path = "/Shipment/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/OrderFulfillment/Shipment/Index";
             public const string ControllerName = "Shipment";
             public const string ActionName = "Index";
         }
@@ -91,8 +91,8 @@ namespace COMP313003_202101_Project.Pages
         public static class Invoice
         {
             public const string PageName = "Invoice";
-            public const string RoleName = "Invoice";
-            public const string Path = "/Invoice/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/Invoice/Index";
             public const string ControllerName = "Invoice";
             public const string ActionName = "Index";
         }
@@ -100,8 +100,8 @@ namespace COMP313003_202101_Project.Pages
         public static class PaymentReceipt
         {
             public const string PageName = "Payment Receive";
-            public const string RoleName = "Payment Receive";
-            public const string Path = "/PaymentReceipt/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/PaymentReceipt/Index";
             public const string ControllerName = "PaymentReceipt";
             public const string ActionName = "Index";
         }
@@ -109,8 +109,8 @@ namespace COMP313003_202101_Project.Pages
         public static class BillType
         {
             public const string PageName = "Bill Type";
-            public const string RoleName = "Bill Type";
-            public const string Path = "/BillType/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/BillType/Index";
             public const string ControllerName = "BillType";
             public const string ActionName = "Index";
         }
@@ -118,17 +118,17 @@ namespace COMP313003_202101_Project.Pages
         public static class Branch
         {
             public const string PageName = "Branch";
-            public const string RoleName = "Branch";
-            public const string Path = "/Branch/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Inventory/Branch/Index";
             public const string ControllerName = "Branch";
             public const string ActionName = "Index";
         }
 
         public static class Bank
         {
-            public const string PageName = "Cash Bank";
-            public const string RoleName = "Cash Bank";
-            public const string Path = "/Bank/Index";
+            public const string PageName = "Bank";
+            public const string RoleName = "Supplier,Merchantk";
+            public const string Path = "/Accounting/Bank/Index";
             public const string ControllerName = "Bank";
             public const string ActionName = "Index";
         }
@@ -136,8 +136,8 @@ namespace COMP313003_202101_Project.Pages
         public static class Currency
         {
             public const string PageName = "Currency";
-            public const string RoleName = "Currency";
-            public const string Path = "/Currency/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/Currency/Index";
             public const string ControllerName = "Currency";
             public const string ActionName = "Index";
         }
@@ -145,8 +145,8 @@ namespace COMP313003_202101_Project.Pages
         public static class CustomerType
         {
             public const string PageName = "Customer Type";
-            public const string RoleName = "Customer Type";
-            public const string Path = "/CustomerType/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Identity/CustomerType/Index";
             public const string ControllerName = "CustomerType";
             public const string ActionName = "Index";
         }
@@ -154,8 +154,8 @@ namespace COMP313003_202101_Project.Pages
         public static class InvoiceType
         {
             public const string PageName = "Invoice Type";
-            public const string RoleName = "Invoice Type";
-            public const string Path = "/InvoiceType/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/InvoiceType/Index";
             public const string ControllerName = "InvoiceType";
             public const string ActionName = "Index";
         }
@@ -163,8 +163,8 @@ namespace COMP313003_202101_Project.Pages
         public static class PaymentType
         {
             public const string PageName = "Payment Type";
-            public const string RoleName = "Payment Type";
-            public const string Path = "/PaymentType/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/PaymentType/Index";
             public const string ControllerName = "PaymentType";
             public const string ActionName = "Index";
         }
@@ -172,8 +172,8 @@ namespace COMP313003_202101_Project.Pages
         public static class ItemType
         {
             public const string PageName = "Product Type";
-            public const string RoleName = "Product Type";
-            public const string Path = "/ItemType/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Inventory/ItemType/Index";
             public const string ControllerName = "ItemType";
             public const string ActionName = "Index";
         }
@@ -181,8 +181,8 @@ namespace COMP313003_202101_Project.Pages
         public static class SalesType
         {
             public const string PageName = "Sales Type";
-            public const string RoleName = "Sales Type";
-            public const string Path = "/SalesType/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/SalesType/Index";
             public const string ControllerName = "SalesType";
             public const string ActionName = "Index";
         }
@@ -190,8 +190,8 @@ namespace COMP313003_202101_Project.Pages
         public static class ShipmentType
         {
             public const string PageName = "Shipment Type";
-            public const string RoleName = "Shipment Type";
-            public const string Path = "/ShipmentType/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/OrderFulfillment/ShipmentType/Index";
             public const string ControllerName = "ShipmentType";
             public const string ActionName = "Index";
         }
@@ -199,8 +199,8 @@ namespace COMP313003_202101_Project.Pages
         public static class UnitOfMeasure
         {
             public const string PageName = "Unit Of Measure";
-            public const string RoleName = "Unit Of Measure";
-            public const string Path = "/UnitOfMeasure/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Inventory/UnitOfMeasure/Index";
             public const string ControllerName = "UnitOfMeasure";
             public const string ActionName = "Index";
         }
@@ -208,8 +208,8 @@ namespace COMP313003_202101_Project.Pages
         public static class VendorType
         {
             public const string PageName = "Vendor Type";
-            public const string RoleName = "Vendor Type";
-            public const string Path = "/VendorType/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Identity/VendorType/Index";
             public const string ControllerName = "VendorType";
             public const string ActionName = "Index";
         }
@@ -217,8 +217,8 @@ namespace COMP313003_202101_Project.Pages
         public static class Warehouse
         {
             public const string PageName = "Warehouse";
-            public const string RoleName = "Warehouse";
-            public const string Path = "/Warehouse/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Inventory/Warehouse/Index";
             public const string ControllerName = "Warehouse";
             public const string ActionName = "Index";
         }
@@ -226,8 +226,8 @@ namespace COMP313003_202101_Project.Pages
         public static class PurchaseType
         {
             public const string PageName = "Purchase Type";
-            public const string RoleName = "Purchase Type";
-            public const string Path = "/PurchaseType/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Accounting/PurchaseType/Index";
             public const string ControllerName = "PurchaseType";
             public const string ActionName = "Index";
         }
@@ -235,8 +235,8 @@ namespace COMP313003_202101_Project.Pages
         public static class User
         {
             public const string PageName = "User";
-            public const string RoleName = "User";
-            public const string Path = "/UserRole/Index";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Identity/UserRole/Index";
             public const string ControllerName = "UserRole";
             public const string ActionName = "Index";
         }
@@ -245,7 +245,7 @@ namespace COMP313003_202101_Project.Pages
         {
             public const string PageName = "Change Password";
             public const string RoleName = "Change Password";
-            public const string Path = "/UserRole/ChangePassword";
+            public const string Path = "/Identity/UserRole/ChangePassword";
             public const string ControllerName = "UserRole";
             public const string ActionName = "ChangePassword";
         }
@@ -253,8 +253,8 @@ namespace COMP313003_202101_Project.Pages
         public static class Role
         {
             public const string PageName = "Role";
-            public const string RoleName = "Role";
-            public const string Path = "/UserRole/Role";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Identity/UserRole/Role";
             public const string ControllerName = "UserRole";
             public const string ActionName = "Role";
         }
@@ -262,8 +262,8 @@ namespace COMP313003_202101_Project.Pages
         public static class ChangeRole
         {
             public const string PageName = "Change Role";
-            public const string RoleName = "Change Role";
-            public const string Path = "/UserRole/ChangeRole";
+            public const string RoleName = "Supplier,Merchant";
+            public const string Path = "/Identity/UserRole/ChangeRole";
             public const string ControllerName = "UserRole";
             public const string ActionName = "ChangeRole";
         }
@@ -271,7 +271,7 @@ namespace COMP313003_202101_Project.Pages
         public static class Dashboard
         {
             public const string PageName = "Dashboard Main";
-            public const string RoleName = "Dashboard Main";
+            public const string RoleName = "Supplier,Merchant";
             public const string Path = "/Dashboard/Index";
             public const string ControllerName = "Dashboard";
             public const string ActionName = "Index";
