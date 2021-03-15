@@ -10,7 +10,7 @@ namespace COMP313003_202101_Project.Controllers
     [Area("Identity")]
     public class DashboardController : Controller
     {
-        [Authorize(Roles = Pages.MainMenu.Dashboard.RoleName)]
+        //[Authorize(Roles = Pages.MainMenu.Dashboard.RoleName)]
         public IActionResult Index()
         {
             return View();

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace COMP313003_202101_Project.Areas.Accounting.Controllers
 {
     [Area("Accounting")]
-    [Authorize(Roles = Pages.MainMenu.GoodsReceivedNote.RoleName)]
+    //[Authorize(Roles = Pages.MainMenu.GoodsReceivedNote.RoleName)]
     public class GoodsReceivedNoteController : Controller
     {
         public IActionResult Index()
