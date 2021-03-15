@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace COMP313003_202101_Project.Areas.Orders.Controllers
 {
+    [Area("Orders")]
     [Authorize(Roles = Pages.MainMenu.PurchaseOrder.RoleName)]
     public class PurchaseOrderLineController : Controller
     {

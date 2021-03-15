@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace COMP313003_202101_Project.Areas.Orders.Controllers.Api
 {
+    [Area("Orders")]
     [Authorize]
     [Produces("application/json")]
     [Route("api/SalesOrderLine")]
