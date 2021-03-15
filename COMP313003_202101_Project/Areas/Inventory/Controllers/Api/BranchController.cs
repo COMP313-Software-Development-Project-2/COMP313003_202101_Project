@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace COMP313003_202101_Project.Areas.Inventory.Controllers.Api
 {
+    [Area("Inventory")]
     [Authorize]
     [Produces("application/json")]
     [Route("api/Branch")]

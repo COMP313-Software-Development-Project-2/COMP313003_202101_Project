@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace COMP313003_202101_Project.Areas.Inventory.Controllers
 {
-    [Authorize(Roles = Pages.MainMenu.Product.RoleName)]
+    [Authorize(Roles = Pages.MainMenu.Item.RoleName)]
     public class ItemController : Controller
     {
         public IActionResult Index()

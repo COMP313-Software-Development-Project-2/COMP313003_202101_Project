@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace COMP313003_202101_Project.Areas.Inventory.Controllers
 {
+    [Area("Inventory")]
     [Authorize(Roles = Pages.MainMenu.UnitOfMeasure.RoleName)]
     public class UnitOfMeasureController : Controller
     {
