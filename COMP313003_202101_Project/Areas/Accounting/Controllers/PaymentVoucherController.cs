@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace COMP313003_202101_Project.Areas.Accounting.Controllers
 {
+    [Area("Accounting")]
     [Authorize(Roles = Pages.MainMenu.PaymentVoucher.RoleName)]
     public class PaymentVoucherController : Controller
     {

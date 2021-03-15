@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace COMP313003_202101_Project.Controllers.Api
 {
+    [Area("Accounting")]
     [Authorize]
     [Produces("application/json")]
     [Route("api/BillType")]
