@@ -46,7 +46,7 @@
         $(function () {
 
             var dataManager = ej.DataManager({
-                url: "/api/CashBank",
+                url: "/api/Bank",
                 adaptor: new ej.WebApiAdaptor(),
                 offline: true
             });
@@ -56,9 +56,9 @@
                     dataSource: ej.DataManager({
                         json: e.result,
                         adaptor: new ej.remoteSaveAdaptor(),
-                        insertUrl: "/api/CashBank/Insert",
-                        updateUrl: "/api/CashBank/Update",
-                        removeUrl: "/api/CashBank/Remove",
+                        insertUrl: "/api/Bank/Insert",
+                        updateUrl: "/api/Bank/Update",
+                        removeUrl: "/api/Bank/Remove",
                     }),
                     toolbarSettings: {
                         showToolbar: true,
@@ -84,8 +84,8 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "CashBankId", headerText: 'Cash & Bank Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "CashBankName", headerText: 'Cash & Bank Name', validationRules: { required: true } },
+                        { field: "BankId", headerText: 'Bank Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "BankName", headerText: 'Bank Id', validationRules: { required: true } },
                         { field: "Description", headerText: 'Description', },
                     ],
                     actionComplete: "complete",

@@ -95,14 +95,14 @@
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
                         { field: "BillId", headerText: 'Bill', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "BillName", headerText: 'Bill#', allowEditing: false },
-                        { field: "GoodsReceivedNoteId", headerText: 'GRN', foreignKeyField: "GoodsReceivedNoteId", foreignKeyValue: "GoodsReceivedNoteName", dataSource: dataManagerGoodsReceivedNote, validationRules: { required: true } },
-                        { field: "VendorDONumber", headerText: 'Vendor DO#' },
-                        { field: "VendorInvoiceNumber", headerText: 'Vendor Invoice#' },
+                        { field: "BillName", headerText: 'Bill Id', allowEditing: false },
                         { field: "BillDate", headerText: 'Bill Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true }, validationRules: { required: true } },
                         { field: "BillDueDate", headerText: 'Bill Due Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true }, validationRules: { required: true } },
                         { field: "BillTypeId", headerText: 'Bill Type', foreignKeyField: "BillTypeId", foreignKeyValue: "BillTypeName", dataSource: dataManagerBillType },
-                    ],
+                        { field: "DeliveryOrderId", headerText: 'Delivery Order Id' },
+                        { field: "InvoiceId", headerText: 'Vendor Invoice#' },
+                        { field: "GoodsReceivedNoteId", headerText: 'GRN', foreignKeyField: "GoodsReceivedNoteId", foreignKeyValue: "GoodsReceivedNoteName", dataSource: dataManagerGoodsReceivedNote, validationRules: { required: true } },
+                   ],
                     actionComplete: "complete",
                 });
             });

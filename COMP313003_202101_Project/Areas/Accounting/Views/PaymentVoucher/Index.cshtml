@@ -62,7 +62,7 @@
             });
 
             var dataManagerCashBank = ej.DataManager({
-                url: "/api/CashBank",
+                url: "/api/Bank",
                 adaptor: new ej.WebApiAdaptor()
             });
 
@@ -99,14 +99,14 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "PaymentvoucherId", headerText: 'Payment Voucher', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "PaymentVoucherName", headerText: 'Payment Voucher#', allowEditing: false },
-                        { field: "IsFullPayment", headerText: 'Full Payment', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
-                        { field: "BillId", headerText: 'Bill#', foreignKeyField: "BillId", foreignKeyValue: "BillName", dataSource: dataManagerBill, validationRules: { required: true } },
+                        { field: "PaymentVoucherId", headerText: 'Payment Voucher Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "PaymentVoucherName", headerText: 'Payment Voucher Id', allowEditing: false },
+                        { field: "BillId", headerText: 'Bill Id', foreignKeyField: "BillId", foreignKeyValue: "BillName", dataSource: dataManagerBill, validationRules: { required: true } },
                         { field: "PaymentDate", headerText: 'Payment Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "PaymentTypeId", headerText: 'Payment Type', foreignKeyField: "PaymentTypeId", foreignKeyValue: "PaymentTypeName", dataSource: dataManagerPaymentType },
-                        { field: "CashBankId", headerText: 'Payment Source', foreignKeyField: "CashBankId", foreignKeyValue: "CashBankName", dataSource: dataManagerCashBank },
                         { field: "PaymentAmount", headerText: 'Payment Amount', editType: "numericedit", format: "{0:n2}", validationRules: { required: true } },
+                        { field: "PaymentTypeId", headerText: 'Payment Type', foreignKeyField: "PaymentTypeId", foreignKeyValue: "PaymentTypeName", dataSource: dataManagerPaymentType },
+                        { field: "BankId", headerText: 'Payment Source', foreignKeyField: "CashBankId", foreignKeyValue: "CashBankName", dataSource: dataManagerCashBank },
+                        { field: "IsFullPayment", headerText: 'Full Payment', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
                     ],
                     actionComplete: "complete",
                 });

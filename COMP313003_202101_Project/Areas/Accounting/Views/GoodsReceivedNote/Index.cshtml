@@ -16,6 +16,7 @@
                             title="Collapse">
                         <i class="fa fa-minus"></i>
                     </button>
+
                     <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
                         <i class="fa fa-times"></i>
                     </button>
@@ -94,14 +95,14 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "GoodsReceivedNoteId", headerText: 'GRN', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "GoodsReceivedNoteName", headerText: 'GRN#', allowEditing: false },
-                        { field: "IsFullReceive", headerText: 'Full Receive', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
-                        { field: "PurchaseOrderId", headerText: 'PO#', foreignKeyField: "PurchaseOrderId", foreignKeyValue: "PurchaseOrderName", dataSource: dataManagerPurchaseOrder, validationRules: { required: true } },
+                        { field: "GoodsReceivedNoteId", headerText: 'GRN Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "GoodsReceivedNoteName", headerText: 'GRN Id', allowEditing: false },
                         { field: "GRNDate", headerText: 'Receiving Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "VendorDONumber", headerText: 'Vendor DO#', validationRules: { required: true } },
-                        { field: "VendorInvoiceNumber", headerText: 'Vendor Invoice#', },
-                        { field: "WarehouseId", headerText: 'Warehouse', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
+                        { field: "WarehouseId", headerText: 'Warehouse Id', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
+                        { field: "PurchaseOrderId", headerText: 'PO#', foreignKeyField: "PurchaseOrderId", foreignKeyValue: "PurchaseOrderName", dataSource: dataManagerPurchaseOrder, validationRules: { required: true } },
+                        { field: "InvoiceId", headerText: 'Vendor Invoice Id', },
+                        { field: "DeliveryOrderId", headerText: 'Delivery Order Id', validationRules: { required: true } },
+                        { field: "IsFullReceive", headerText: 'Full Receive', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },                        
                     ],
                     actionComplete: "complete",
                 });

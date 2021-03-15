@@ -10,7 +10,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title text-primary"><i class="fa fa-certificate"></i> @ViewData["Title"]</h3>
+                <h3 class="box-title text-dark-gray"><i class="fa fa-certificate"></i> @ViewData["Title"]</h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
@@ -94,12 +94,12 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "InvoiceId", headerText: 'Invoice', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "InvoiceName", headerText: 'Invoice#', allowEditing: false },
-                        { field: "ShipmentId", headerText: 'Shipment / DO', foreignKeyField: "ShipmentId", foreignKeyValue: "ShipmentName", dataSource: dataManagerShipment, validationRules: { required: true } },
+                        { field: "InvoiceId", headerText: 'Invoice Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "InvoiceName", headerText: 'Invoice Id', allowEditing: false },
                         { field: "InvoiceDate", headerText: 'Invoice Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
                         { field: "InvoiceDueDate", headerText: 'Invoice Due Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
                         { field: "InvoiceTypeId", headerText: 'Invoice Type', foreignKeyField: "InvoiceTypeId", foreignKeyValue: "InvoiceTypeName", dataSource: dataManagerInvoiceType },
+                        { field: "ShipmentId", headerText: 'Shipment Id / DO Id', foreignKeyField: "ShipmentId", foreignKeyValue: "ShipmentName", dataSource: dataManagerShipment, validationRules: { required: true } },
                     ],
                     actionComplete: "complete",
                 });
