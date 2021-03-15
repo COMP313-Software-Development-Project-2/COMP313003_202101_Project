@@ -10,7 +10,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title text-primary"><i class="fa fa-building-o"></i> @ViewData["Title"]</h3>
+                <h3 class="box-title text-dark-gray"><i class="fa fa-building-o"></i> @ViewData["Title"]</h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
@@ -90,7 +90,7 @@
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
                         { field: "CustomerId", headerText: 'Customer Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "CustomerName", headerText: 'Customer Name', validationRules: { required: true } },
+                        { field: "CustomerName", headerText: 'Customer Id', validationRules: { required: true } },
                         { field: "CustomerTypeId", headerText: 'Customer Type', foreignKeyField: "CustomerTypeId", foreignKeyValue: "CustomerTypeName", dataSource: dataManagerCustomerType },
                         { field: "Address", headerText: 'Address', },
                         { field: "City", headerText: 'City', },
