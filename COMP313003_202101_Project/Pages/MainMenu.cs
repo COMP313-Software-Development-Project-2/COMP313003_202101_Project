@@ -38,7 +38,7 @@ namespace COMP313003_202101_Project.Pages
         {
             public const string PageName = "Purchase Order";
             public const string RoleName = "Supplier,Merchant";
-            public const string Path = "/Inventory/PurchaseOrder/Index";
+            public const string Path = "/Orders/PurchaseOrder/Index";
             public const string ControllerName = "PurchaseOrder";
             public const string ActionName = "Index";
         }
@@ -99,7 +99,7 @@ namespace COMP313003_202101_Project.Pages
 
         public static class PaymentReceipt
         {
-            public const string PageName = "Payment Receive";
+            public const string PageName = "Payment Receipt";
             public const string RoleName = "Supplier,Merchant";
             public const string Path = "/Accounting/PaymentReceipt/Index";
             public const string ControllerName = "PaymentReceipt";
@@ -227,7 +227,7 @@ namespace COMP313003_202101_Project.Pages
         {
             public const string PageName = "Purchase Type";
             public const string RoleName = "Supplier,Merchant";
-            public const string Path = "/Accounting/PurchaseType/Index";
+            public const string Path = "/Orders/PurchaseType/Index";
             public const string ControllerName = "PurchaseType";
             public const string ActionName = "Index";
         }
