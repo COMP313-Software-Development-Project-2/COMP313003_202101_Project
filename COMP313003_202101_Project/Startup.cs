@@ -15,6 +15,8 @@ using Microsoft.EntityFrameworkCore;
 using COMP313003_202101_Project.Data;
 using COMP313003_202101_Project.Models;
 using COMP313003_202101_Project.Services;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Newtonsoft.Json.Serialization;
 
 namespace COMP313003_202101_Project
 {
@@ -71,11 +73,42 @@ namespace COMP313003_202101_Project
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(Configuration);
 
+
+
+            // Add functionality to inject IOptions<T>
+            // https://stackoverflow.com/questions/31453495/how-to-read-appsettings-values-from-a-json-file-in-asp-net-core
+            services.AddOptions();
+
+            // Add our Config object so it can be injected
+            services.Configure<UserSupplierDefaultOptions>(Configuration.GetSection("UserSupplierDefaultOptions"));
+            services.Configure<UserMerchantDefaultOptions>(Configuration.GetSection("UserMerchantDefaultOptions"));
+            services.Configure<UserAssociateDefaultOptions>(Configuration.GetSection("UserAssociateDefaultOptions"));
+            
+            //services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<INumberSequence, Services.NumberSequence>();
+            services.AddTransient<IRoles, Roles>();
+            services.AddTransient<IFunctional, Functional>();
+
+            services.AddControllers().AddNewtonsoftJson();
+
+            // https://stackoverflow.com/questions/60763517/how-do-i-solve-addjsonoptions-does-not-contain-definition-of-serializersettings
+            services.AddMvc()
+            .AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                //pascal case json
+                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider services)
         {
+            var context = services.GetRequiredService<ApplicationDbContext>();
+            var functional = services.GetRequiredService<IFunctional>();
+            DbInitializer.Initialize(context, functional).Wait();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -97,7 +130,7 @@ namespace COMP313003_202101_Project
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{area=Identity}/{controller=UserRole}/{action=UserProfile}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
