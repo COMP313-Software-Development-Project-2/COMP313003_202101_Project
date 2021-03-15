@@ -9,6 +9,6 @@ namespace COMP313003_202101_Project.Services
     {
         Task GenerateRolesFromPagesAsync();
 
-        Task AddToRoles(string applicationUserId);
+        Task AddToRoles(string UserId);
     }
 }
