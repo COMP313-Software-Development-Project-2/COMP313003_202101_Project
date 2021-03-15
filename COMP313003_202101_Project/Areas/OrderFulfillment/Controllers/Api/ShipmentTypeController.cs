@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace COMP313003_202101_Project.Areas.OrderFulfillment.Controllers.Api
 {
+    [Area("OrderFulfillment")]
     [Authorize]
     [Produces("application/json")]
     [Route("api/ShipmentType")]
