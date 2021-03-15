@@ -182,7 +182,7 @@ namespace COMP313003_202101_Project.Pages
         {
             public const string PageName = "Sales Type";
             public const string RoleName = "Supplier,Merchant";
-            public const string Path = "/Accounting/SalesType/Index";
+            public const string Path = "/Orders/SalesType/Index";
             public const string ControllerName = "SalesType";
             public const string ActionName = "Index";
         }
@@ -244,7 +244,7 @@ namespace COMP313003_202101_Project.Pages
         public static class ChangePassword
         {
             public const string PageName = "Change Password";
-            public const string RoleName = "Change Password";
+            public const string RoleName = "Supplier,Merchant";
             public const string Path = "/Identity/UserRole/ChangePassword";
             public const string ControllerName = "UserRole";
             public const string ActionName = "ChangePassword";
@@ -272,7 +272,7 @@ namespace COMP313003_202101_Project.Pages
         {
             public const string PageName = "Dashboard Main";
             public const string RoleName = "Supplier,Merchant";
-            public const string Path = "/Dashboard/Index";
+            public const string Path = "/Identity/Dashboard/Index";
             public const string ControllerName = "Dashboard";
             public const string ActionName = "Index";
         }
