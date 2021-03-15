@@ -1,0 +1,171 @@
+/*
+ * Skin: Black
+ * -----------
+ */
+/* skin-black navbar */
+.skin .main-header {
+  border-bottom: 1px solid #d2d6de;
+}
+.skin .main-header .navbar-toggle {
+  color: #333;
+}
+.skin .main-header .navbar-brand {
+  color: #333;
+  border-right: 1px solid #d2d6de;
+}
+.skin .main-header .navbar {
+  background-color: #ffffff;
+}
+.skin .main-header .navbar .nav > li > a {
+  color: #333333;
+}
+.skin .main-header .navbar .nav > li > a:hover,
+.skin .main-header .navbar .nav > li > a:active,
+.skin .main-header .navbar .nav > li > a:focus,
+.skin .main-header .navbar .nav .open > a,
+.skin .main-header .navbar .nav .open > a:hover,
+.skin .main-header .navbar .nav .open > a:focus,
+.skin .main-header .navbar .nav > .active > a {
+  background: #ffffff;
+  color: #999999;
+}
+.skin .main-header .navbar .sidebar-toggle {
+  color: #333333;
+}
+.skin .main-header .navbar .sidebar-toggle:hover {
+  color: #999999;
+  background: #ffffff;
+}
+.skin .main-header .navbar > .sidebar-toggle {
+  color: #333;
+  border-right: 1px solid #d2d6de;
+}
+.skin .main-header .navbar .navbar-nav > li > a {
+  border-right: 1px solid #d2d6de;
+}
+.skin .main-header .navbar .navbar-custom-menu .navbar-nav > li > a,
+.skin .main-header .navbar .navbar-right > li > a {
+  border-left: 1px solid #d2d6de;
+  border-right-width: 0;
+}
+.skin .main-header > .logo {
+  background-color: #ffffff;
+  color: #333333;
+  border-bottom: 0 solid transparent;
+  border-right: 1px solid #d2d6de;
+}
+.skin .main-header > .logo:hover {
+  background-color: #fcfcfc;
+}
+@media (max-width: 767px) {
+  .skin .main-header > .logo {
+    background-color: #222222;
+    color: #ffffff;
+    border-bottom: 0 solid transparent;
+    border-right: none;
+  }
+  .skin .main-header > .logo:hover {
+    background-color: #1f1f1f;
+  }
+}
+.skin .main-header li.user-header {
+  background-color: #222;
+}
+.skin .content-header {
+  background: transparent;
+  box-shadow: none;
+}
+.skin .wrapper,
+.skin .main-sidebar,
+.skin .left-side {
+  background-color: #f9fafc;
+}
+.skin .main-sidebar {
+  border-right: 1px solid #d2d6de;
+}
+.skin .user-panel > .info,
+.skin .user-panel > .info > a {
+  color: #444444;
+}
+.skin .sidebar-menu > li {
+  -webkit-transition: border-left-color 0.3s ease;
+  -o-transition: border-left-color 0.3s ease;
+  transition: border-left-color 0.3s ease;
+}
+.skin .sidebar-menu > li.header {
+  color: #848484;
+  background: #f9fafc;
+}
+.skin .sidebar-menu > li > a {
+  border-left: 3px solid transparent;
+  font-weight: 600;
+}
+.skin .sidebar-menu > li:hover > a,
+.skin .sidebar-menu > li.active > a {
+  color: #000000;
+  background: #f4f4f5;
+}
+.skin .sidebar-menu > li.active {
+  border-left-color: #ffffff;
+}
+.skin .sidebar-menu > li.active > a {
+  font-weight: 600;
+}
+.skin .sidebar-menu > li > .treeview-menu {
+  background: #f4f4f5;
+}
+.skin .sidebar a {
+  color: #444444;
+}
+.skin .sidebar a:hover {
+  text-decoration: none;
+}
+.skin .sidebar-menu .treeview-menu > li > a {
+  color: #777777;
+}
+.skin .sidebar-menu .treeview-menu > li.active > a,
+.skin .sidebar-menu .treeview-menu > li > a:hover {
+  color: #000000;
+}
+.skin .sidebar-menu .treeview-menu > li.active > a {
+  font-weight: 600;
+}
+.skin .sidebar-form {
+  border-radius: 3px;
+  border: 1px solid #d2d6de;
+  margin: 10px 10px;
+}
+.skin .sidebar-form input[type="text"],
+.skin .sidebar-form .btn {
+  box-shadow: none;
+  background-color: #fff;
+  border: 1px solid transparent;
+  height: 35px;
+}
+.skin .sidebar-form input[type="text"] {
+  color: #666;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+}
+.skin .sidebar-form input[type="text"]:focus,
+.skin .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  background-color: #fff;
+  color: #666;
+}
+.skin .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  border-left-color: #fff;
+}
+.skin .sidebar-form .btn {
+  color: #999;
+  border-top-left-radius: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+}
+@media (min-width: 768px) {
+  .skin.sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu {
+    border-left: 1px solid #d2d6de;
+  }
+}

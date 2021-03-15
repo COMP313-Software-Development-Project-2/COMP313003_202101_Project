@@ -26,10 +26,10 @@
     <!-- Pace style -->
     <link rel="stylesheet" href="~/adminlte/plugins/pace/pace.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="~/adminlte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="~/adminlte/dist/css/Components.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="~/adminlte/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="~/adminlte/dist/css/skins/skin.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,7 +48,7 @@
     @RenderSection("Styles", required: false)
 
 </head>
-<body class="hold-transition skin-blue fixed sidebar-mini">
+<body class="hold-transition skin fixed sidebar-mini">
     <div class="wrapper">
         @Html.Partial("_AdminlteMainHeader", appUser)
         <!-- Left side column. contains the logo and sidebar -->

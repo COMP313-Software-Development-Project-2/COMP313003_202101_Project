@@ -27,9 +27,9 @@ namespace COMP313003_202101_Project.Pages
 
         public static class Item
         {
-            public const string PageName = "Product";
+            public const string PageName = "Item";
             public const string RoleName = "Supplier,Merchant";
-            public const string Path = "/Inventory/Product/Index";
+            public const string Path = "/Inventory/Item/Index";
             public const string ControllerName = "Product";
             public const string ActionName = "Index";
         }
@@ -171,7 +171,7 @@ namespace COMP313003_202101_Project.Pages
 
         public static class ItemType
         {
-            public const string PageName = "Product Type";
+            public const string PageName = "Item Type";
             public const string RoleName = "Supplier,Merchant";
             public const string Path = "/Inventory/ItemType/Index";
             public const string ControllerName = "ItemType";
