@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Product";
+    ViewData["Title"] = "Item";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -10,7 +10,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title text-primary"><i class="fa fa-tag"></i> @ViewData["Title"]</h3>
+                <h3 class="box-title text-dark-gray"><i class="fa fa-tag"></i> @ViewData["Title"]</h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
@@ -46,7 +46,7 @@
         $(function () {
 
             var dataManager = ej.DataManager({
-                url: "/api/Product",
+                url: "/api/Item",
                 adaptor: new ej.WebApiAdaptor(),
                 offline: true
             });
@@ -71,9 +71,9 @@
                     dataSource: ej.DataManager({
                         json: e.result,
                         adaptor: new ej.remoteSaveAdaptor(),
-                        insertUrl: "/api/Product/Insert",
-                        updateUrl: "/api/Product/Update",
-                        removeUrl: "/api/Product/Remove",
+                        insertUrl: "/api/Item/Insert",
+                        updateUrl: "/api/Item/Update",
+                        removeUrl: "/api/Item/Remove",
                     }),
                     toolbarSettings: {
                         showToolbar: true,
@@ -99,14 +99,15 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "ProductId", headerText: 'Product Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "ProductName", headerText: 'Product Name', validationRules: { required: true } },
+                        { field: "ItemId", headerText: 'Item Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "ItemName", headerText: 'Item Name', validationRules: { required: true } },
                         { field: "UnitOfMeasureId", headerText: 'UOM', foreignKeyField: "UnitOfMeasureId", foreignKeyValue: "UnitOfMeasureName", dataSource: dataManagerUnitOfMeasure, validationRules: { required: true } },
                         { field: "Barcode", headerText: 'Barcode', },
                         { field: "Description", headerText: 'Description', },
-                        { field: "ProductImageUrl", headerText: 'ProductImageUrl', visible: false },
-                        { field: "DefaultBuyingPrice", headerText: 'Buying Price', editType: "numericedit", format: "{0:n2}" },
-                        { field: "DefaultSellingPrice", headerText: 'Selling Price', editType: "numericedit", format: "{0:n2}" },
+                        { field: "Quantity", headerText: 'Quantity', },
+                        { field: "ItemImageUrl", headerText: 'ItemImageUrl', visible: false },
+                        { field: "BuyingPrice", headerText: 'Buying Price', editType: "numericedit", format: "{0:n2}" },
+                        { field: "SellingPrice", headerText: 'Selling Price', editType: "numericedit", format: "{0:n2}" },
                         { field: "BranchId", headerText: 'Branch', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch },
                         { field: "CurrencyId", headerText: 'Currency', allowEditing: false, foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyCode", dataSource: dataManagerCurrency },
                     ],

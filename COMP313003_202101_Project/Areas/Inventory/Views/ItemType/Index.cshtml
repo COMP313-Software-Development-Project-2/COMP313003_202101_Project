@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Product Type";
+    ViewData["Title"] = "Item Type";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -10,7 +10,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title text-primary"><i class="fa fa-gear"></i> @ViewData["Title"]</h3>
+                <h3 class="box-title text-dark-gray"><i class="fa fa-gear"></i> @ViewData["Title"]</h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
@@ -46,7 +46,7 @@
         $(function () {
 
             var dataManager = ej.DataManager({
-                url: "/api/ProductType",
+                url: "/api/ItemType",
                 adaptor: new ej.WebApiAdaptor(),
                 offline: true
             });
@@ -56,9 +56,9 @@
                     dataSource: ej.DataManager({
                         json: e.result,
                         adaptor: new ej.remoteSaveAdaptor(),
-                        insertUrl: "/api/ProductType/Insert",
-                        updateUrl: "/api/ProductType/Update",
-                        removeUrl: "/api/ProductType/Remove",
+                        insertUrl: "/api/ItemType/Insert",
+                        updateUrl: "/api/ItemType/Update",
+                        removeUrl: "/api/ItemType/Remove",
                     }),
                     toolbarSettings: {
                         showToolbar: true,
@@ -84,8 +84,8 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "ProductTypeId", headerText: 'Product Type Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "ProductTypeName", headerText: 'Product Type Name', validationRules: { required: true } },
+                        { field: "ItemTypeId", headerText: 'Item Type Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "ItemTypeName", headerText: 'Item Type Name', validationRules: { required: true } },
                         { field: "Description", headerText: 'Description', },
                     ],
                     actionComplete: "complete",
