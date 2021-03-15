@@ -131,6 +131,12 @@ namespace COMP313003_202101_Project
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{area=Identity}/{controller=UserRole}/{action=UserProfile}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "areaRoute",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "controllerRoute",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
