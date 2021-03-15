@@ -10,7 +10,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title text-primary"><i class="fa fa-certificate"></i> @ViewData["Title"]</h3>
+                <h3 class="box-title text-dark-gray"><i class="fa fa-certificate"></i> @ViewData["Title"]</h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
@@ -106,13 +106,13 @@
                     columns: [
                         { headerText: 'Detail', template: "<a href='/PurchaseOrder/Detail/{{:PurchaseOrderId}}'>Detail</a>" },
                         { field: "PurchaseOrderId", headerText: 'PO Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "PurchaseOrderName", headerText: 'PO#', allowEditing: false },
+                        { field: "PurchaseOrderName", headerText: 'PO Id', allowEditing: false },
                         { field: "BranchId", headerText: 'Branch', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch, validationRules: { required: true } },
                         { field: "VendorId", headerText: 'Vendor', foreignKeyField: "VendorId", foreignKeyValue: "VendorName", dataSource: dataManagerVendor, validationRules: { required: true } },
                         { field: "OrderDate", headerText: 'Order Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
                         { field: "DeliveryDate", headerText: 'Delivery Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "PurchaseTypeId", headerText: 'Purchase Type', foreignKeyField: "PurchaseTypeId", foreignKeyValue: "PurchaseTypeName", dataSource: dataManagerPurchaseType },
                         { field: "CurrencyId", headerText: 'Currency', allowEditing: false, foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyName", dataSource: dataManagerCurrency },
+                        { field: "PurchaseTypeId", headerText: 'Purchase Type', foreignKeyField: "PurchaseTypeId", foreignKeyValue: "PurchaseTypeName", dataSource: dataManagerPurchaseType },
                         { field: "Freight", headerText: 'Freight', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
                     ],
                     actionComplete: "complete",
