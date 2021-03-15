@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace coderush.Models.AccountViewModels
+namespace COMP313003_202101_Project.Models.AccountViewModels
 {
     public class LoginWithRecoveryCodeViewModel
     {
