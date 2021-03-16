@@ -9,7 +9,7 @@ namespace COMP313003_202101_Project.Areas.Accounting.Controllers
 {
     [Area("Accounting")]
     //[Authorize(Roles = Pages.MainMenu.Bank.RoleName)]
-    public class CashBankController : Controller
+    public class BankController : Controller
     {
         public IActionResult Index()
         {
