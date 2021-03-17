@@ -25,11 +25,14 @@
 #### URL:
 http://comp313003202101project-dev.us-east-1.elasticbeanstalk.com/
 
+
 #### Project Name:
 COMP313003_202101_Project
 
+
 #### Description:
 Inventory Management System
+
 
 #### Institution:
 ICET Department
@@ -40,35 +43,45 @@ Progress Campus, Block A
 
 Centennial College  
 
+
 #### Course:
 COMP313-003 - Software Development Project 2
+
 
 #### Instructor:
 Georgios Kougioumtzoglou
 
+
 #### Group:
 Group 03
+
+
 
 ### Technologies
 
 #### Development Tools and Environment
 * []()Visual Studio 2019 (Community Edition). (https://visualstudio.microsoft.com/)
 
+
 #### Framework
 * []()ASP.NET Core 5.0
 * []()EF / Entity Framework
+
 
 #### Languages
 * []()C#
 * []()HTML
 * []()CSS
-* []()Java
+* []()JavaScript
+
 
 #### Database
 * []()MSSQL
 
+
 #### Architecture
 Design Pattern: MVC
+
 
 
 <!-- GETTING STARTED -->
@@ -85,6 +98,7 @@ Design Pattern: MVC
 * []()Microsoft.AspNetCore.Mvc.NewtonsoftJson
 * []()Microsoft.AspNetCore.App.Ref
 
+
 ### Installation
 
 1. Clone the repo:
@@ -100,12 +114,14 @@ Design Pattern: MVC
    Update-Database
    ```
 
+
 <!-- ROADMAP -->
 ## Roadmap
 
 [Projects](https://github.com/COMP313-Software-Development-Project-2/COMP313003_202101_Project/projects) - an overview of our project management.
 
 [Issues](https://github.com/COMP313-Software-Development-Project-2/COMP313003_202101_Project/issues) - a list of features, tasks, and issues.
+
 
 
 <!-- CONTACT -->
