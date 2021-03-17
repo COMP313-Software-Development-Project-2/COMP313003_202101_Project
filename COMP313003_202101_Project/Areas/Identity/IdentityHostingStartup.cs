@@ -15,10 +15,22 @@ namespace COMP313003_202101_Project.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
+            builder.ConfigureServices((context, services) => 
+            {
                 services.AddDbContext<ApplicationDbContext>(options =>
+                {
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("LocalConnection")));
+                        context.Configuration.GetConnectionString("RemoteConnection"),
+                        sqlServerOptionsAction: sqlOptions =>
+                        {
+                            sqlOptions.EnableRetryOnFailure(
+                                maxRetryCount: 10,
+                                maxRetryDelay: TimeSpan.FromSeconds(30),
+                                errorNumbersToAdd: null
+                            );
+                        }
+                   );
+                });
 
                 services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
                     .AddRoles<IdentityRole>()
