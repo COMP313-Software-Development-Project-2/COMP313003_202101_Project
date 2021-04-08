@@ -136,7 +136,7 @@ namespace COMP313003_202101_Project.Areas.Orders.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<SalesOrder> payload)
         {
             SalesOrder salesOrder = _context.SalesOrder
-                .Where(x => x.SalesOrderId == (int)payload.key)
+                .Where(x => x.SalesOrderId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.SalesOrder.Remove(salesOrder);
             _context.SaveChanges();

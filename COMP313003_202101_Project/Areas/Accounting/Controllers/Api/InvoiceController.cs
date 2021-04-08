@@ -88,7 +88,7 @@ namespace COMP313003_202101_Project.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<Invoice> payload)
         {
             Invoice invoice = _context.Invoice
-                .Where(x => x.InvoiceId == (int)payload.key)
+                .Where(x => x.InvoiceId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.Invoice.Remove(invoice);
             _context.SaveChanges();

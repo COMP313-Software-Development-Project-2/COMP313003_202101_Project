@@ -61,7 +61,7 @@ namespace COMP313003_202101_Project.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<PaymentReceipt> payload)
         {
             PaymentReceipt paymentReceive = _context.PaymentReceipt
-                .Where(x => x.PaymentReceiptId == (int)payload.key)
+                .Where(x => x.PaymentReceiptId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.PaymentReceipt.Remove(paymentReceive);
             _context.SaveChanges();

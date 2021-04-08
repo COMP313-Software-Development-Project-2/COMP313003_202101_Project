@@ -56,7 +56,7 @@ namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<Vendor> payload)
         {
             Vendor vendor = _context.Vendor
-                .Where(x => x.VendorId == (int)payload.key)
+                .Where(x => x.VendorId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.Vendor.Remove(vendor);
             _context.SaveChanges();

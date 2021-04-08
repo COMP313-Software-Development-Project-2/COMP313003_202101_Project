@@ -108,7 +108,7 @@ namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
         [HttpPost("[action]")]
         public async Task<IActionResult> Remove([FromBody]CrudViewModel<UserProfile> payload)
         {
-            var userProfile = _context.UserProfile.SingleOrDefault(x => x.UserProfileId.Equals((int)payload.key));
+            var userProfile = _context.UserProfile.SingleOrDefault(x => x.UserProfileId.Equals((int)(long)payload.key));
             if (userProfile != null)
             {
                 var user = _context.Users.Where(x => x.Id.Equals(userProfile.UserId)).FirstOrDefault();
