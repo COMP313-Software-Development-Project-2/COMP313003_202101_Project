@@ -57,7 +57,7 @@ namespace COMP313003_202101_Project.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<PaymentType> payload)
         {
             PaymentType paymentType = _context.PaymentType
-                .Where(x => x.PaymentTypeId == (int)payload.key)
+                .Where(x => x.PaymentTypeId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.PaymentType.Remove(paymentType);
             _context.SaveChanges();

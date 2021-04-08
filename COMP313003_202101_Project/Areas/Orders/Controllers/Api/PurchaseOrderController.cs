@@ -138,7 +138,7 @@ namespace COMP313003_202101_Project.Areas.Orders.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<PurchaseOrder> payload)
         {
             PurchaseOrder purchaseOrder = _context.PurchaseOrder
-                .Where(x => x.PurchaseOrderId == (int)payload.key)
+                .Where(x => x.PurchaseOrderId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.PurchaseOrder.Remove(purchaseOrder);
             _context.SaveChanges();

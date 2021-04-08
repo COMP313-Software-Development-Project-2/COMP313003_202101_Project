@@ -57,7 +57,7 @@ namespace COMP313003_202101_Project.Areas.Identity.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<Customer> payload)
         {
             Customer customer = _context.Customer
-                .Where(x => x.CustomerId == (int)payload.key)
+                .Where(x => x.CustomerId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.Customer.Remove(customer);
             _context.SaveChanges();

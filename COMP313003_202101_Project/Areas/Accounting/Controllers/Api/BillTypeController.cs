@@ -57,7 +57,7 @@ namespace COMP313003_202101_Project.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<BillType> payload)
         {
             BillType billType = _context.BillType
-                .Where(x => x.BillTypeId == (int)payload.key)
+                .Where(x => x.BillTypeId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.BillType.Remove(billType);
             _context.SaveChanges();

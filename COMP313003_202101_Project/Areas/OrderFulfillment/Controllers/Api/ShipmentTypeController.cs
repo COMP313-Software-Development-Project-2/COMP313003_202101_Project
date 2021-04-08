@@ -57,7 +57,7 @@ namespace COMP313003_202101_Project.Areas.OrderFulfillment.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<ShipmentType> payload)
         {
             ShipmentType shipmentType = _context.ShipmentType
-                .Where(x => x.ShipmentTypeId == (int)payload.key)
+                .Where(x => x.ShipmentTypeId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.ShipmentType.Remove(shipmentType);
             _context.SaveChanges();

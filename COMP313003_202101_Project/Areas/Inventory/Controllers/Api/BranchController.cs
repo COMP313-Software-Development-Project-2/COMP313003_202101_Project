@@ -57,7 +57,7 @@ namespace COMP313003_202101_Project.Areas.Inventory.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<Branch> payload)
         {
             Branch branch = _context.Branch
-                .Where(x => x.BranchId == (int)payload.key)
+                .Where(x => x.BranchId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.Branch.Remove(branch);
             _context.SaveChanges();

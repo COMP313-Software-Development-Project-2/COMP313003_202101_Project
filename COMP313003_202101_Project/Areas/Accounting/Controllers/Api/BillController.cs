@@ -88,7 +88,7 @@ namespace COMP313003_202101_Project.Areas.Accounting.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<Bill> payload)
         {
             Bill bill = _context.Bill
-                .Where(x => x.BillId == (int)payload.key)
+                .Where(x => x.BillId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.Bill.Remove(bill);
             _context.SaveChanges();

@@ -71,7 +71,7 @@ namespace COMP313003_202101_Project.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<Currency> payload)
         {
             Currency currency = _context.Currency
-                .Where(x => x.CurrencyId == (int)payload.key)
+                .Where(x => x.CurrencyId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.Currency.Remove(currency);
             _context.SaveChanges();

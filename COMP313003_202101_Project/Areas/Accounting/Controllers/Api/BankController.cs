@@ -56,7 +56,7 @@ namespace COMP313003_202101_Project.Areas.Accounting.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<Bank> payload)
         {
             Bank cashBank = _context.Bank
-                .Where(x => x.BankId == (int)payload.key)
+                .Where(x => x.BankId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.Bank.Remove(cashBank);
             _context.SaveChanges();
