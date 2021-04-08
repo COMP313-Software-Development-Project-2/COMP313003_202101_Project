@@ -88,7 +88,7 @@ namespace COMP313003_202101_Project.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<GoodsReceivedNote> payload)
         {
             GoodsReceivedNote goodsReceivedNote = _context.GoodsReceivedNote
-                .Where(x => x.GoodsReceivedNoteId == (int)payload.key)
+                .Where(x => x.GoodsReceivedNoteId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.GoodsReceivedNote.Remove(goodsReceivedNote);
             _context.SaveChanges();

@@ -57,7 +57,7 @@ namespace COMP313003_202101_Project.Areas.Orders.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<SalesType> payload)
         {
             SalesType salesType = _context.SalesType
-                .Where(x => x.SalesTypeId == (int)payload.key)
+                .Where(x => x.SalesTypeId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.SalesType.Remove(salesType);
             _context.SaveChanges();

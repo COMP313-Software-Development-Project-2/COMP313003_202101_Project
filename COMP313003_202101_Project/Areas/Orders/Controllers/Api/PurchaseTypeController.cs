@@ -58,7 +58,7 @@ namespace COMP313003_202101_Project.Areas.Orders.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<PurchaseType> payload)
         {
             PurchaseType purchaseType = _context.PurchaseType
-                .Where(x => x.PurchaseTypeId == (int)payload.key)
+                .Where(x => x.PurchaseTypeId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.PurchaseType.Remove(purchaseType);
             _context.SaveChanges();

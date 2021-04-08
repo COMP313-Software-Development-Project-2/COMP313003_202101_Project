@@ -58,7 +58,7 @@ namespace COMP313003_202101_Project.Areas.Inventory.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<ItemType> payload)
         {
             ItemType productType = _context.ItemType
-                .Where(x => x.ItemTypeId == (int)payload.key)
+                .Where(x => x.ItemTypeId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.ItemType.Remove(productType);
             _context.SaveChanges();

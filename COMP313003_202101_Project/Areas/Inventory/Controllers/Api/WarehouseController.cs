@@ -58,7 +58,7 @@ namespace COMP313003_202101_Project.Areas.Inventory.Controllers.Api
         public IActionResult Remove([FromBody]CrudViewModel<Warehouse> payload)
         {
             Warehouse warehouse = _context.Warehouse
-                .Where(x => x.WarehouseId == (int)payload.key)
+                .Where(x => x.WarehouseId == (int)(long)payload.key)
                 .FirstOrDefault();
             _context.Warehouse.Remove(warehouse);
             _context.SaveChanges();
