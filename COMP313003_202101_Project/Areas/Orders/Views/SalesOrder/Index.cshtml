@@ -104,7 +104,7 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { headerText: 'Detail', template: "<a href='/SalesOrder/Detail/{{:SalesOrderId}}'>Detail</a>" },
+                        { headerText: 'Detail', template: "<a href='/Orders/SalesOrder/Detail/{{:SalesOrderId}}'>Detail</a>" },
                         { field: "SalesOrderId", headerText: 'SO Id', isPrimaryKey: true, isIdentity: true, visible: false },
                         { field: "SalesOrderName", headerText: 'SO#', allowEditing: false },
                         { field: "BranchId", headerText: 'Branch', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch, validationRules: { required: true } },
