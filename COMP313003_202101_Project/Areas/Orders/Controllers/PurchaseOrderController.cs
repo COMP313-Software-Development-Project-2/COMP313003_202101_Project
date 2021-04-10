@@ -22,7 +22,14 @@ namespace COMP313003_202101_Project.Areas.Orders.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (User.IsInRole("Merchant"))
+            {
+                return View("Add");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public IActionResult Detail(int id)
