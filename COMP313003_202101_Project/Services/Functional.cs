@@ -96,26 +96,16 @@ namespace COMP313003_202101_Project.Services
                 await _context.SaveChangesAsync();
 
                 List<Item> Items = new List<Item>() {
-                    new Item{ItemName = "Chai"},
-                    new Item{ItemName = "Chang"},
-                    new Item{ItemName = "Aniseed Syrup"},
-                    new Item{ItemName = "Chef Anton's Cajun Seasoning"},
-                    new Item{ItemName = "Chef Anton's Gumbo Mix"},
-                    new Item{ItemName = "Grandma's Boysenberry Spread"},
-                    new Item{ItemName = "Uncle Bob's Organic Dried Pears"},
-                    new Item{ItemName = "Northwoods Cranberry Sauce"},
-                    new Item{ItemName = "Mishi Kobe Niku"},
-                    new Item{ItemName = "Ikura"},
-                    new Item{ItemName = "Queso Cabrales"},
-                    new Item{ItemName = "Queso Manchego La Pastora"},
-                    new Item{ItemName = "Konbu"},
-                    new Item{ItemName = "Tofu"},
-                    new Item{ItemName = "Genen Shouyu"},
-                    new Item{ItemName = "Pavlova"},
-                    new Item{ItemName = "Alice Mutton"},
-                    new Item{ItemName = "Carnarvon Tigers"},
-                    new Item{ItemName = "Teatime Chocolate Biscuits"},
-                    new Item{ItemName = "Sir Rodney's Marmalade"}
+                    new Item{ItemName = "Item 01"},
+                    new Item{ItemName = "Item 02"},
+                    new Item{ItemName = "Item 03"},
+                    new Item{ItemName = "Item 04"},
+                    new Item{ItemName = "Item 05"},
+                    new Item{ItemName = "Item 06"},
+                    new Item{ItemName = "Item 07"},
+                    new Item{ItemName = "Item 08"},
+                    new Item{ItemName = "Item 09"},
+                    new Item{ItemName = "Item 10"},
 
                 };
                 await _context.Item.AddRangeAsync(Items);
@@ -125,26 +115,16 @@ namespace COMP313003_202101_Project.Services
                 await _context.SaveChangesAsync();
 
                 List<Customer> customers = new List<Customer>() {
-                    new Customer{CustomerName = "Hanari Carnes", Address = "Rua do Paço, 67"},
-                    new Customer{CustomerName = "HILARION-Abastos", Address = "Carrera 22 con Ave. Carlos Soublette #8-35"},
-                    new Customer{CustomerName = "Hungry Coyote Import Store", Address = "City Center Plaza 516 Main St."},
-                    new Customer{CustomerName = "Hungry Owl All-Night Grocers", Address = "8 Johnstown Road"},
-                    new Customer{CustomerName = "Island Trading", Address = "Garden House Crowther Way"},
-                    new Customer{CustomerName = "Königlich Essen", Address = "Maubelstr. 90"},
-                    new Customer{CustomerName = "La corne d'abondance", Address = "67, avenue de l'Europe"},
-                    new Customer{CustomerName = "La maison d'Asie", Address = "1 rue Alsace-Lorraine"},
-                    new Customer{CustomerName = "Laughing Bacchus Wine Cellars", Address = "1900 Oak St."},
-                    new Customer{CustomerName = "Lazy K Kountry Store", Address = "12 Orchestra Terrace"},
-                    new Customer{CustomerName = "Lehmanns Marktstand", Address = "Magazinweg 7"},
-                    new Customer{CustomerName = "Let's Stop N Shop", Address = "87 Polk St. Suite 5"},
-                    new Customer{CustomerName = "LILA-Supermercado", Address = "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"},
-                    new Customer{CustomerName = "LINO-Delicateses", Address = "Ave. 5 de Mayo Porlamar"},
-                    new Customer{CustomerName = "Lonesome Pine Restaurant", Address = "89 Chiaroscuro Rd."},
-                    new Customer{CustomerName = "Magazzini Alimentari Riuniti", Address = "Via Ludovico il Moro 22"},
-                    new Customer{CustomerName = "Maison Dewey", Address = "Rue Joseph-Bens 532"},
-                    new Customer{CustomerName = "Mère Paillarde", Address = "43 rue St. Laurent"},
-                    new Customer{CustomerName = "Morgenstern Gesundkost", Address = "Heerstr. 22"},
-                    new Customer{CustomerName = "Old World Delicatessen", Address = "2743 Bering St."}
+                    new Customer{CustomerName = "Customer 01", Address = "Address 01"},
+                    new Customer{CustomerName = "Customer 02", Address = "Address 02"},
+                    new Customer{CustomerName = "Customer 03", Address = "Address 03"},
+                    new Customer{CustomerName = "Customer 04", Address = "Address 04"},
+                    new Customer{CustomerName = "Customer 05", Address = "Address 05"},
+                    new Customer{CustomerName = "Customer 06", Address = "Address 06"},
+                    new Customer{CustomerName = "Customer 07", Address = "Address 07"},
+                    new Customer{CustomerName = "Customer 08", Address = "Address 08"},
+                    new Customer{CustomerName = "Customer 09", Address = "Address 09"},
+                    new Customer{CustomerName = "Customer 10", Address = "Address 10"}
                 };
                 await _context.Customer.AddRangeAsync(customers);
                 await _context.SaveChangesAsync();
@@ -153,25 +133,16 @@ namespace COMP313003_202101_Project.Services
                 await _context.SaveChangesAsync();
 
                 List<Vendor> vendors = new List<Vendor>() {
-                    new Vendor{VendorName = "Exotic Liquids", Address = "49 Gilbert St."},
-                    new Vendor{VendorName = "New Orleans Cajun Delights", Address = "P.O. Box 78934"},
-                    new Vendor{VendorName = "Grandma Kelly's Homestead", Address = "707 Oxford Rd."},
-                    new Vendor{VendorName = "Tokyo Traders", Address = "9-8 Sekimai Musashino-shi"},
-                    new Vendor{VendorName = "Cooperativa de Quesos 'Las Cabras'", Address = "Calle del Rosal 4"},
-                    new Vendor{VendorName = "Mayumi's", Address = "92 Setsuko Chuo-ku"},
-                    new Vendor{VendorName = "Pavlova, Ltd.", Address = "74 Rose St. Moonie Ponds"},
-                    new Vendor{VendorName = "Specialty Biscuits, Ltd.", Address = "29 King's Way"},
-                    new Vendor{VendorName = "PB Knäckebröd AB", Address = "Kaloadagatan 13"},
-                    new Vendor{VendorName = "Refrescos Americanas LTDA", Address = "Av. das Americanas 12.890"},
-                    new Vendor{VendorName = "Heli Süßwaren GmbH & Co. KG", Address = "Tiergartenstraße 5"},
-                    new Vendor{VendorName = "Plutzer Lebensmittelgroßmärkte AG", Address = "Bogenallee 51"},
-                    new Vendor{VendorName = "Nord-Ost-Fisch Handelsgesellschaft mbH", Address = "Frahmredder 112a"},
-                    new Vendor{VendorName = "Formaggi Fortini s.r.l.", Address = "Viale Dante, 75"},
-                    new Vendor{VendorName = "Norske Meierier", Address = "Hatlevegen 5"},
-                    new Vendor{VendorName = "Bigfoot Breweries", Address = "3400 - 8th Avenue Suite 210"},
-                    new Vendor{VendorName = "Svensk Sjöföda AB", Address = "Brovallavägen 231"},
-                    new Vendor{VendorName = "Aux joyeux ecclésiastiques", Address = "203, Rue des Francs-Bourgeois"},
-                    new Vendor{VendorName = "New England Seafood Cannery", Address = "Order Processing Dept. 2100 Paul Revere Blvd."}
+                    new Vendor{VendorName = "Vendor 01", Address = "Address 01"},
+                    new Vendor{VendorName = "Vendor 02", Address = "Address 02"},
+                    new Vendor{VendorName = "Vendor 03", Address = "Address 03"},
+                    new Vendor{VendorName = "Vendor 04", Address = "Address 04"},
+                    new Vendor{VendorName = "Vendor 05", Address = "Address 05"},
+                    new Vendor{VendorName = "Vendor 06", Address = "Address 06"},
+                    new Vendor{VendorName = "Vendor 07", Address = "Address 07"},
+                    new Vendor{VendorName = "Vendor 08", Address = "Address 08"},
+                    new Vendor{VendorName = "Vendor 09", Address = "Address 09"},
+                    new Vendor{VendorName = "Vendor 10", Address = "Address 10"},
                 };
                 await _context.Vendor.AddRangeAsync(vendors);
                 await _context.SaveChangesAsync();
