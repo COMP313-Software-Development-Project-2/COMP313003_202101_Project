@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace COMP313003_202101_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210315004259_Migration01")]
+    [Migration("20210411192408_Migration01")]
     partial class Migration01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -922,6 +922,9 @@ namespace COMP313003_202101_Project.Migrations
 
                     b.Property<double>("Freight")
                         .HasColumnType("float");
+
+                    b.Property<string>("MerchantUserName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTimeOffset>("OrderDate")
                         .HasColumnType("datetimeoffset");

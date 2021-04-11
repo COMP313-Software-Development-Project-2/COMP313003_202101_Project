@@ -408,6 +408,7 @@ namespace COMP313003_202101_Project.Migrations
                 {
                     PurchaseOrderId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    MerchantUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PurchaseOrderName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     BranchId = table.Column<int>(type: "int", nullable: false),
                     VendorId = table.Column<int>(type: "int", nullable: false),
