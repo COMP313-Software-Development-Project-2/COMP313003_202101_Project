@@ -11,8 +11,8 @@ namespace COMP313003_202101_Project.Areas.Orders.Models
         [Required]
         [Display(Name = "Purchase Order Id")]
         public int PurchaseOrderId { get; set; }
-        [Display(Name = "Merchant Id")]
-        public int CustomerId { get; set; }
+        [Display(Name = "Merchant UserName")]
+        public string MerchantUserName { get; set; }
         [Display(Name = "Purchase Order Name")]
         public string PurchaseOrderName { get; set; }
         [Display(Name = "Branch Id")]

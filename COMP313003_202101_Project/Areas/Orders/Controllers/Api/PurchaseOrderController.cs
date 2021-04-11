@@ -34,9 +34,20 @@ namespace COMP313003_202101_Project.Areas.Orders.Controllers.Api
         [HttpGet]
         public async Task<IActionResult> GetPurchaseOrder()
         {
-            List<PurchaseOrder> Items = await _context.PurchaseOrder.ToListAsync();
-            int Count = Items.Count();
-            return Ok(new { Items, Count });
+            var userName = HttpContext.User.Identity.Name;
+
+            if (User.IsInRole("Merchant"))
+            {
+                List<PurchaseOrder> Items = await _context.PurchaseOrder.Where(x => x.MerchantUserName.Equals(userName)).ToListAsync();
+                int Count = Items.Count();
+                return Ok(new { Items, Count });
+            }
+            else
+            {
+                List<PurchaseOrder> Items = await _context.PurchaseOrder.ToListAsync();
+                int Count = Items.Count();
+                return Ok(new { Items, Count });
+            }
         }
 
         [HttpGet("[action]")]

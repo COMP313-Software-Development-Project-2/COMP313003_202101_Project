@@ -70,6 +70,10 @@
                 url: "/api/Currency",
                 adaptor: new ej.WebApiAdaptor()
             });
+            var dataManagerUser = ej.DataManager({
+                url: "/api/AspNetUsers",
+                adaptor: new ej.WebApiAdaptor()
+            });
 
             dataManager.ready.done(function (e) { 
                 $("#Grid").ejGrid({
@@ -107,6 +111,7 @@
                         { headerText: 'Detail', template: "<a href='/Orders/PurchaseOrder/Detail/{{:PurchaseOrderId}}'>Detail</a>" },
                         { field: "PurchaseOrderId", headerText: 'PO Id', isPrimaryKey: true, isIdentity: true, visible: false },
                         { field: "PurchaseOrderName", headerText: 'PO Id', allowEditing: false },
+                        { field: "MerchantUserName", headerText: 'Merchant UserName', dataSource: dataManagerUser, validationRules: { required: true } },
                         { field: "BranchId", headerText: 'Branch', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch, validationRules: { required: true } },
                         { field: "VendorId", headerText: 'Vendor', foreignKeyField: "VendorId", foreignKeyValue: "VendorName", dataSource: dataManagerVendor, validationRules: { required: true } },
                         { field: "OrderDate", headerText: 'Order Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
