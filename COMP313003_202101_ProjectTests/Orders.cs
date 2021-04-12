@@ -27,14 +27,7 @@ namespace COMP313003_202101_Project_Tests_Orders
                 [TestMethod]
                 public void ReturnNull_IfNull()
                 {
-                    // Arrange
-                    var controller = new PurchaseOrderController(context);
 
-                    // Act
-                    var result = controller.Index() as ViewResult;
-
-                    // Assert
-                    Assert.AreEqual(null, result.ViewName);
                 }
             }
         }
